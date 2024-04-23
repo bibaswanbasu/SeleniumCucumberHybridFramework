@@ -27,7 +27,7 @@ public class DriverFactory {
 		if (browser.equalsIgnoreCase("chrome")) {
 
 			System.out.println("[INFO] Browser is -> " + browser);
-			WebDriverManager.chromedriver().setup();
+//			WebDriverManager.chromedriver().setup();
 			tlDriver.set(new ChromeDriver());
 //			try {
 //				tlDriver.set(new RemoteWebDriver(new URL("https://hub-cloud.browserstack.com/wd/hub"), caps));
@@ -38,7 +38,7 @@ public class DriverFactory {
 
 		} else if (browser.equalsIgnoreCase("edge")) {
 			System.out.println("[INFO] Browser is -> " + browser);
-			WebDriverManager.edgedriver().setup();
+//			WebDriverManager.edgedriver().setup();
 			tlDriver.set(new EdgeDriver());
 //			try {
 //				tlDriver.set(new RemoteWebDriver(new URL("https://hub-cloud.browserstack.com/wd/hub"), caps));
@@ -48,7 +48,7 @@ public class DriverFactory {
 //			}
 		} else if (browser.equalsIgnoreCase("firefox")) {
 			System.out.println("[INFO] Browser is -> " + browser);
-			WebDriverManager.edgedriver().setup();
+//			WebDriverManager.edgedriver().setup();
 			tlDriver.set(new FirefoxDriver());
 //			try {
 //				tlDriver.set(new RemoteWebDriver(new URL("https://hub-cloud.browserstack.com/wd/hub"), caps));
