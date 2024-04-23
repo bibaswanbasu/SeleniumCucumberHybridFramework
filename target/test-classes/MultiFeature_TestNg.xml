@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Multiple FeatureFile Runner">
+	<listeners>
+		<listener class-name="cucumber.api.testng.TestNGCucumberRunner"></listener>
+	</listeners>
+	<test name="Regression Suite" parallel="classes" thread-count="2">
+		<classes>
+			<class name="org.alpha.test.runner.TestRunner_regression">
+				<parameter name="features" value="src/test/resources/features"></parameter>
+				<parameter name="glue" value="org.alpha.test.stepDefs"></parameter>
+				<parameter name="glue" value="com.alpha.MyHooks"></parameter>
+				<parameter name="tags" value="@smoke"></parameter>
+			</class>
+
+		</classes>
+	</test>
+</suite>
